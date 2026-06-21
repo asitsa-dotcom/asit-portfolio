@@ -216,6 +216,27 @@ section{padding:100px 0;position:relative;z-index:2;}
 .g-ph{background:linear-gradient(135deg,rgba(108,43,217,.12),rgba(0,212,255,.12));border:2px dashed rgba(108,43,217,.25);flex-direction:column;gap:8px;font-size:13px;color:var(--muted);}
 .g-ph em{font-size:30px;font-style:normal;}
 
+/* MEDIA HANDLING */
+.mh-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0 44px;}
+.mh-stat{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(12px);border-radius:16px;padding:20px 16px;text-align:center;transition:all .3s;}
+.mh-stat:hover{background:var(--glass2);transform:translateY(-4px);}
+.mh-stat-n{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.mh-stat-l{font-size:11px;color:var(--muted);margin-top:2px;font-weight:500;}
+.mh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.mh-card{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(16px);border-radius:var(--r);overflow:hidden;transition:all .4s;}
+.mh-card:hover{transform:translateY(-6px);border-color:rgba(0,212,255,.35);}
+.mh-thumb-wrap{position:relative;width:100%;aspect-ratio:1280/466;overflow:hidden;}
+.mh-thumb-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+.mh-platform{position:absolute;top:12px;left:12px;background:rgba(4,4,16,.75);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);padding:5px 12px;border-radius:50px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);}
+.mh-body{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.mh-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.mh-meta{font-size:12px;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:.3px;}
+.mh-badge{padding:7px 16px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;white-space:nowrap;flex-shrink:0;}
+@media(max-width:700px){
+  .mh-grid{grid-template-columns:1fr;}
+  .mh-stats{grid-template-columns:1fr;}
+}
+
 /* VIDEO MODAL */
 .vid-modal{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;}
 .vid-modal.open{opacity:1;pointer-events:all;}
@@ -460,6 +481,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:36
         <li><a href="#projects">Apps</a></li>
         <li><a href="#certificates">Certs</a></li>
         <li><a href="#gallery">Creative</a></li>
+        <li><a href="#media-handling">Media</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -476,6 +498,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:36
   <a href="#skills" onclick="closeMob()">Skills</a>
   <a href="#projects" onclick="closeMob()">Apps</a>
   <a href="#gallery" onclick="closeMob()">Creative</a>
+  <a href="#media-handling" onclick="closeMob()">Media</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
 </div>
 
@@ -952,6 +975,78 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:36
       <div class="g-item g-ph" data-cat="banner"><em>🖼️</em><span>Festival Poster</span><span style="font-size:11px;opacity:.6">Annapurna Puja Creative</span></div>
       <div class="g-item g-ph" data-cat="banner"><em>📱</em><span>Social Media Post</span></div>
       <div class="g-item g-ph" data-cat="video"><em>🎥</em><span>AI Video Reel</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MEDIA HANDLING -->
+<section id="media-handling">
+  <div class="container">
+    <div class="rev">
+      <div class="sec-label">Community Management</div>
+      <h2 class="sec-title">My <span class="g">Media Handling</span></h2>
+      <p class="sec-desc">5+ years of hands-on experience managing Facebook pages, Facebook groups, and YouTube channels for brands and communities — real audiences, real engagement, real growth.</p>
+    </div>
+    <div class="mh-stats rev">
+      <div class="mh-stat"><div class="mh-stat-n">5+</div><div class="mh-stat-l">Years Managing</div></div>
+      <div class="mh-stat"><div class="mh-stat-n">6.8K+</div><div class="mh-stat-l">Combined Community</div></div>
+      <div class="mh-stat"><div class="mh-stat-n">4</div><div class="mh-stat-l">Active Platforms</div></div>
+    </div>
+    <div class="mh-grid rev">
+      <div class="mh-card">
+        <div class="mh-thumb-wrap">
+          <span class="mh-platform">Facebook Page</span>
+          <img src="media-growvanta-page.jpg" alt="GrowVanta Facebook Page managed by Asit Kumar Sarkar">
+        </div>
+        <div class="mh-body">
+          <div class="mh-info">
+            <div class="mh-name">GrowVanta — Business Growth &amp; AI Strategy</div>
+            <div class="mh-meta">15 Followers · Marketing Agency</div>
+          </div>
+          <div class="mh-badge">Founder &amp; Admin</div>
+        </div>
+      </div>
+      <div class="mh-card">
+        <div class="mh-thumb-wrap">
+          <span class="mh-platform">Facebook Group</span>
+          <img src="media-sankharitola-group.jpg" alt="Sankharitola Durgotsab Samiti Facebook Group managed by Asit Kumar Sarkar">
+        </div>
+        <div class="mh-body">
+          <div class="mh-info">
+            <div class="mh-name">Sankharitola Durgotsab Samiti</div>
+            <div class="mh-meta">216 Members · Public Group</div>
+          </div>
+          <div class="mh-badge">Admin</div>
+        </div>
+      </div>
+      <div class="mh-card">
+        <div class="mh-thumb-wrap">
+          <span class="mh-platform">Facebook Group</span>
+          <img src="media-santosh-mitro-square.jpg" alt="Santosh Mitro Square Facebook Group managed by Asit Kumar Sarkar">
+        </div>
+        <div class="mh-body">
+          <div class="mh-info">
+            <div class="mh-name">Santosh Mitro Square</div>
+            <div class="mh-meta">6.6K Members · Private Group</div>
+          </div>
+          <div class="mh-badge">Admin</div>
+        </div>
+      </div>
+      <div class="mh-card">
+        <div class="mh-thumb-wrap">
+          <span class="mh-platform">YouTube</span>
+          <img src="media-youtube-channel.jpg" alt="Sankharitola Durgotsab Samity YouTube Channel managed by Asit Kumar Sarkar">
+        </div>
+        <div class="mh-body">
+          <div class="mh-info">
+            <div class="mh-name">Sankaritola Durgotsab Samity</div>
+            <div class="mh-meta">38 Subscribers · Cultural Content</div>
+          </div>
+          <div class="mh-badge">Content &amp; Promotion</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
